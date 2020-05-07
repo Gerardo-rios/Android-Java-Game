@@ -12,12 +12,14 @@ public class PandemiLTD extends ApplicationAdapter {
 
 	private GameStateMananger gsm;
 	private  SpriteBatch batch;
+	public static int Width = 2150;
+	public static int Height = 1020;
 
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		gsm = new GameStateMananger();
-		Gdx.gl.glClearColor(0, 0, 1, 1);
+		Gdx.gl.glClearColor(0, 0, 0, 1);
 		gsm.push(new MenuState(gsm)); //pusheo el estado menu
 	}
 
