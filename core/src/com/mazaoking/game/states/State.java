@@ -1,7 +1,6 @@
-package com.mazaoking.game.States;
+package com.mazaoking.game.states;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector3;
 
@@ -38,5 +37,10 @@ public abstract class State {
      * @param spriteBatch
      */
     public abstract void render(SpriteBatch spriteBatch);
+
+    /**
+     * Dispose para disposear o quitar y poder cambiar de estado
+     */
+    public abstract void dispose();
 
 }

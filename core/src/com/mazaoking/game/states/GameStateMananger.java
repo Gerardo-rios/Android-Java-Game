@@ -1,4 +1,4 @@
-package com.mazaoking.game.States;
+package com.mazaoking.game.states;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -10,19 +10,19 @@ import java.util.Stack;
 public class GameStateMananger {
 
     //pila que guardara los estados del juego
-    private Stack<State> states;
+    private Stack<com.mazaoking.game.states.State> states;
 
     /**
      * constructor, inicia la pila
      */
     public GameStateMananger(){
-        states = new Stack<State>();
+        states = new Stack<com.mazaoking.game.states.State>();
     }
 
     /**
      * pushear un elemento en la pila, oseace agrega
      */
-    public void push(State estado){
+    public void push(com.mazaoking.game.states.State estado){
         states.push(estado);
     }
 

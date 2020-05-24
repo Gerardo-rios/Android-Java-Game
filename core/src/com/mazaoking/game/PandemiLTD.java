@@ -3,17 +3,16 @@ package com.mazaoking.game;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.mazaoking.game.States.GameStateMananger;
-import com.mazaoking.game.States.MenuState;
+import com.mazaoking.game.states.GameStateMananger;
+import com.mazaoking.game.states.MenuState;
 
 public class PandemiLTD extends ApplicationAdapter {
 
 	private GameStateMananger gsm;
 	private  SpriteBatch batch;
-	public static int Width = 2150;
-	public static int Height = 1020;
+	public static int Width = 1090;
+	public static int Height = 2150;
 
 	@Override
 	public void create () {
