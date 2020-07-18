@@ -10,8 +10,8 @@ import com.mazaoking.game.sprites.Palo;
 
 public class PlayState extends State{
 
-    private static final int TUBE_SPACING = 250;
-    private static final int TUBE_COUNT = 5;
+    private static final int TUBE_SPACING = 200;
+    private static final int TUBE_COUNT = 9;
 
     private Texture bg;
     private Bird pajaro;
@@ -25,7 +25,7 @@ public class PlayState extends State{
         camera.setToOrtho(false, PandemiLTD.Width / 2, PandemiLTD.Height / 2 );
         tubos = new Array<Palo>();
 
-        for (int i = 1; i < TUBE_COUNT; i++){
+        for (int i = 1; i <= TUBE_COUNT; i++){
             tubos.add(new Palo(i * (TUBE_SPACING + Palo.ANCHO_TUBO)));
         }
     }
@@ -52,6 +52,9 @@ public class PlayState extends State{
         for (Palo palos: tubos){
             if (camera.position.x - (camera.viewportWidth / 2) > palos.getPostt().x + palos.getTopT().getWidth()){
                 palos.reposition(palos.getPostt().x + (Palo.ANCHO_TUBO + TUBE_SPACING) * TUBE_COUNT);
+            }
+            if (palos.colisiono(pajaro.getBound())){
+                gsm.set(new PlayState(gsm));
             }
         }
 
