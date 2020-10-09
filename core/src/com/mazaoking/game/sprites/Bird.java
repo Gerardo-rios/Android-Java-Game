@@ -6,9 +6,9 @@ import com.badlogic.gdx.math.Vector3;
 
 public class Bird {
 
-    private static final int MOVEMENT = 250;
+    private static final int MOVEMENT = 180;
 
-    private static final int gravedad = -10;
+    private static final int gravedad = -13;
 
     private Vector3 posicion;
     private Vector3 velocidad;
@@ -54,8 +54,12 @@ public class Bird {
 
     public void fly(){
 
-        velocidad.y = 350;
+        velocidad.y = 280;
 
+    }
+
+    public void dispose(){
+        pajaro.dispose();
     }
 
     public Vector3 getPosicion() {

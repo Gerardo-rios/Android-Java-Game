@@ -27,7 +27,6 @@ public class MenuState extends State {
         //just touch para ver cuando se toca la pantalla
         if (Gdx.input.justTouched()){
             gsm.set(new PlayState(gsm));
-            dispose();
         }
 
     }
@@ -57,5 +56,6 @@ public class MenuState extends State {
     public void dispose() {
         background.dispose();
         btn_play.dispose();
+        System.out.println("MENU STATE DISPOSE");
     }
 }

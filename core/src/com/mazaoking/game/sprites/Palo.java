@@ -56,6 +56,11 @@ public class Palo {
 
     }
 
+    public void dispose(){
+        botT.dispose();
+        topT.dispose();
+    }
+
     public Texture getTopT() {
         return topT;
     }

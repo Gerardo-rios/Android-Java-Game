@@ -30,7 +30,7 @@ public class GameStateMananger {
      * popea un elemento de la pila, obviamente el ultimo en ingresar
      */
     public void pop(){
-        states.pop();
+        states.pop().dispose();
     }
 
     /**
@@ -38,7 +38,7 @@ public class GameStateMananger {
      * @param estado
      */
     public void set(State estado){
-        states.pop();
+        states.pop().dispose();
         states.push(estado);
     }
 
